@@ -1,0 +1,7 @@
+Material,Young's Modulus (Pa),Poisson's Ratio
+Steel,210e9,0.3
+Aluminum,69e9,0.33
+Titanium,116e9,0.34
+Rubber,0.01e9,0.5
+Glass,50e9,0.18
+Concrete,30e9,0.2
