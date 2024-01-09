@@ -43,7 +43,7 @@ def plot_elements(vertices, elements, title="Mesh"):
     :param title: Title of the subplot.
     """
     for element in elements:
-        polygon = plt.Polygon(vertices[element], edgecolor='black', alpha=0.3, fill=None)
+        polygon = plt.Polygon(vertices[element], edgecolor='black', alpha=1, fill=True, facecolor='#ADD8E6')
         plt.gca().add_patch(polygon)
 
     plt.scatter(vertices[:, 0], vertices[:, 1], color='red')  # Vertex points
@@ -73,7 +73,7 @@ def animate_mesh(vertices, elements, displacements_over_time, scale=1, interval=
     ax.grid(True)
     title = ax.set_title('Mesh Deformation Over Time')
 
-    polygons = [Polygon(vertices[element], edgecolor='black', alpha=0.3, fill=None) for element in elements]
+    polygons = [Polygon(vertices[element], edgecolor='black', alpha=1, fill=True, facecolor='#ADD8E6') for element in elements]
     for polygon in polygons:
         ax.add_patch(polygon)
     points, = ax.plot([], [], 'ro')
